@@ -4,8 +4,8 @@
     el-header Marion Ma
     About
     Education
-    Project
     Work
+    Project
     Contact
 </template>
 
@@ -21,8 +21,8 @@ export default {
   components: {
     About,
     Education,
-    Project,
     Work,
+    Project,
     Contact
   }
 }
@@ -33,9 +33,8 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-color: #010101;
-  color: azure;
+  background-color: #f2f2f2;
+  color: #010101;
 }
 body {
   margin: 0;
