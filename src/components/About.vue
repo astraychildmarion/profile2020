@@ -1,15 +1,16 @@
 <template lang="pug">
-.section__wrapper.aboutme__wrapper
+.aboutme__wrapper
   el-row
-    el-col(:xs="24" :sm="10")
-      p.aboutme__text {{ content }}
-      p.aboutme__text {{ content2 }}
-      p.aboutme__text {{ content3 }}
-      p.aboutme__text {{ content4 }}
-      p.aboutme__text {{ content5 }}
-    el-col(:xs="24" :sm="14")
+    el-col(:xs="{span:20, offset:2}" :sm="{span: 9, offset: 3}")
+      .aboutme__text__wrapper
+        p.aboutme__text {{ content }}
+        p.aboutme__text {{ content2 }}
+        p.aboutme__text {{ content3 }}
+        p.aboutme__text {{ content4 }}
+        p.aboutme__text {{ content5 }}
+    el-col(:xs="{span:24, offset:0}" :sm="{span: 9, push: 15}")
       .aboutme__img
-        //- img(:src='this.url')
+    //- img(:src='this.url')
 
 </template>
 <script>
@@ -27,29 +28,30 @@ export default {
 }
 </script>
 <style lang="scss">
-.section{
-  &__wrapper {
-    overflow: hidden;
-  }
-}
-
 .aboutme {
   &__wrapper {
     width: 100%;
-    height: 50vh;
     background-color: #010101;
     color: #fff;
+    padding: 0 !important;
   }
   &__text {
     color: azure;
+    &__wrapper {
+      padding: 50px 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   &__img {
-    height: 50vh;
+    // min-height: 50vh;
     text-align: right;
     background-image: url('../assets/me.jpg');
-    background-position: right; /* Center the image */
+    background-position: center right; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: contain; /* Resize the background image to cover the entire container */
+    padding-bottom: 100%;
   }
 }
   

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Container, Header, TabPane, Tabs, Col, Row, Image } from 'element-ui'
+import { Container, Header, TabPane, Tabs, Col, Row, Icon } from 'element-ui'
 import lang from 'element-ui/lib/locale/lang/zh-TW'
 import locale from 'element-ui/lib/locale'
 
@@ -11,4 +11,4 @@ Vue.use(TabPane)
 Vue.use(Tabs)
 Vue.use(Col)
 Vue.use(Row)
-Vue.use(Image)
+Vue.use(Icon)

@@ -1,12 +1,16 @@
 <template lang="pug">
 #app
   el-container
-    el-header Marion Ma
+    el-header 
+      h3 Marion Ma
     About
-    Education
-    Work
-    Project
-    Contact
+    el-row
+      el-col(:xs="{span:20, offset:2}" :sm="{span: 18, offset: 3}")
+        Education
+        Work
+        Project
+        el-footer
+          Contact
 </template>
 
 <script>
@@ -28,15 +32,38 @@ export default {
 }
 </script>
 
-<style>
+<style style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f2f2f2;
+  box-sizing: border-box;
+  background-color: #F2F6FC;
   color: #010101;
 }
 body {
   margin: 0;
 }
+
+.section__wrapper {
+  padding: 50px 0;
+}
+
+.section__title-main {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.section__title {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.section__block {
+  margin-left: 30px;
+}
+
+
 </style>
