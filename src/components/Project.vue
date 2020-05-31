@@ -69,28 +69,22 @@ export default {
       display: inline-block;
       margin-right: 20px;
       margin-bottom: 10px;
-      color:#930EA5;
+      color:#373838;
+      font-weight: bolder;
+      // color:#930EA5;
     }
     &__image {
       position: relative;
       border-radius: 2px;
-      transition: all .5;
+      box-shadow: 2px 2px 3px #ccc;
+      margin-bottom: 20px;
         img {
           width: 100%;
-          position: relative;
-          z-index: 1;
+          height: auto;
         }
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -40px;
-        left: 20px;
-        background-color: rgba(#930EA5, .4);
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-      }
+    }
+    &__block {
+      min-height: 180px;
     }
     &__detail {
       position: absolute;

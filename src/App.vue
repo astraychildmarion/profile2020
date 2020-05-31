@@ -9,8 +9,7 @@
         Education
         Work
         Project
-        el-footer
-          Contact
+    Contact
 </template>
 
 <script>

@@ -1,16 +1,13 @@
 <template lang="pug">
 .aboutme__wrapper
-  el-row
-    el-col(:xs="{span:20, offset:2}" :sm="{span: 9, offset: 3}")
-      .aboutme__text__wrapper
-        p.aboutme__text {{ content }}
-        p.aboutme__text {{ content2 }}
-        p.aboutme__text {{ content3 }}
-        p.aboutme__text {{ content4 }}
-        p.aboutme__text {{ content5 }}
-    el-col(:xs="{span:24, offset:0}" :sm="{span: 9, push: 15}")
-      .aboutme__img
-    //- img(:src='this.url')
+  .aboutme__size.aboutme__text__wrapper
+    p.aboutme__text {{ content }}
+    p.aboutme__text {{ content2 }}
+    p.aboutme__text {{ content3 }}
+    p.aboutme__text {{ content4 }}
+    p.aboutme__text {{ content5 }}
+  .aboutme__size.aboutme__img
+    img(:src='this.url')
 
 </template>
 <script>
@@ -18,6 +15,7 @@ export default {
   name: 'About',
   data() {
     return {
+      url: require('../assets/me2.jpg'),
       content: '嗨，我叫做 Marion，是一位住在台北的前端工程師。',
       content2: '我擁有多元背景，通曉俄語、英語，懂Facebook廣告投放，愛好哲學思考。',
       content3: '於2017年轉職為網頁設計師。',
@@ -30,28 +28,66 @@ export default {
 <style lang="scss">
 .aboutme {
   &__wrapper {
-    width: 100%;
-    background-color: #010101;
-    color: #fff;
-    padding: 0 !important;
+    width:98%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #34538A;
+    color: #F1EFE3;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 3px #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media only screen and (max-width: 1100px) {
+      height: 450px;
+    }
   }
   &__text {
     color: azure;
     &__wrapper {
-      padding: 50px 0;
+      padding: 50px 20px;
+      width: 50%;
+      text-align: left;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      @media only screen and (max-width: 1100px) {
+        z-index: 2;
+      }
     }
   }
   &__img {
-    // min-height: 50vh;
-    text-align: right;
-    background-image: url('../assets/me.jpg');
-    background-position: center right; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain; /* Resize the background image to cover the entire container */
-    padding-bottom: 100%;
+    border-radius: 0 8px 8px 0;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    @media only screen and (max-width: 1100px) {
+      top: 0;
+      bottom: 0;
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(#000, .3);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__size {
+    width: 50%;
+    @media only screen and (max-width: 1100px) {
+      width: 100%;
+    }
   }
 }
   

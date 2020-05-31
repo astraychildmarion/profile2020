@@ -19,12 +19,12 @@ export default {
         {
           year: '隨時隨地',
           school: '自學',
-          content: ['書本、影片、網路文章、一段對話、同事...。我現在會的東西，絕大多數靠著自學而來;這是一段不會結束的過程。']
+          content: ['書本、影片、網路文章、一段對話、同事...。', '我現在會的東西，絕大多數靠著自學而來;這是一段不會結束的過程。']
         },
         {
           year: '2017',
           school: '資策會 uiux 設計師養成班',
-          content: ['Adobe Photoshop', 'Ilustrator', 'Html', 'CSS', 'javascript','Jquery','Php','Ux 概念']
+          content: ['設計以及程式並重的設計師養成班。影像後製到切版、PHP、Jquery、ux概念都有教。']
         },
         {
           year: '2012',
@@ -35,15 +35,9 @@ export default {
           year: '2007-2013',
           school: '政治大學 斯拉夫語文學系',
           content: ['主修俄語，輔修哲學']
-        },
+        }
       ]
-
     }
   },
 }
 </script>
-<style lang="scss">
-.education__block {
-
-}
-</style>
